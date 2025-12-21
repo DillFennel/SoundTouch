@@ -1,0 +1,11 @@
+pages:
+  stage: deploy
+  script:
+    - echo "Building SoundGuard website..."
+    - mkdir -p public
+    - cp -r index.html img screenshots public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
